@@ -12,6 +12,27 @@ When a group of classes is highly dependent on one another, it is called tight c
 
 Dependency injection is one of the most practical design patterns that allow developers to write loosely coupled code. It also helps to keep our code more testable.
 
-Let us take an example,
+### Example:
 
 When some class Jungle needs class Animal to perform its operation, class Jungle is called Dependent, and class Animal is called Dependency.
+
+```
+class Jungle {
+  Animal _animal = Animal();
+
+  void check() {
+    _animal.who();
+  }
+}
+
+class Animal {
+  void who() {
+    print("I am an animal.");
+  }
+}
+
+void main() {
+  Jungle jungle = Jungle();
+  jungle.check(); // prints "I am an animal."
+}
+```
