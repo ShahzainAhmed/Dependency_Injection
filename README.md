@@ -1,4 +1,4 @@
-## Dependency Injection in Flutter
+## Dependency Injection
 
 ### What is Dependency Injection?
 
