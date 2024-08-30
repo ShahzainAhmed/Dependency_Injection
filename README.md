@@ -36,3 +36,39 @@ void main() {
   jungle.check(); // prints "I am an animal."
 }
 ```
+
+- In the above example, our class, Jungle, is tightly coupled. It means the class Jungle is highly dependent on the dependency Animal.
+- If we want to add a new animal Tiger, then there is no way to change the animal to Tiger as we have hardcoded Jungle and Animal classes.
+
+Now using dependency injection to solve our problem.
+
+```
+void main() {
+  final tiger = Tiger();
+  final jungle = Jungle(tiger);
+  jungle.check(); // prints "I am tiger."
+}
+
+class Jungle {
+  final Animal _animal;
+
+  Jungle(this._animal);
+
+  void check() {
+    _animal.who();
+  }
+}
+
+class Animal {
+  void who() {
+    print('I am an animal.');
+  }
+}
+
+class Tiger implements Animal {
+  @override
+  void who() {
+    print('I am a tiger.');
+  }
+}
+```
