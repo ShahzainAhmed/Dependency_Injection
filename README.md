@@ -1,8 +1,8 @@
-## Dependency Injection
+## Dependency Injection in Flutter
 
 ### What is Dependency Injection?
 
-DI is a design pattern in which a class requests dependencies from external sources rather than creating them. It means the dependent objects are injected or supplied to your class. The class doesn’t have to do any initialization by itself. It will get what it wants from the injector.
+Dependency Injection is a design pattern in which a class requests dependencies from external sources rather than creating them. It means the dependent objects are injected or supplied to your class. The class doesn’t have to do any initialization by itself. It will get what it wants from the injector.
 
 ### Loose coupling: 
 When an object gets the object to be used from external sources, we call it loose coupling. In other words, the loose coupling means that the objects are independent.
@@ -14,7 +14,7 @@ Dependency injection is one of the most practical design patterns that allow dev
 
 ### Example:
 
-When some class Jungle needs class Animal to perform its operation, class Jungle is called Dependent, and class Animal is called Dependency.
+When some class Jungle needs a class Animal to perform its operation, class Jungle is called Dependent, and class Animal is called Dependency.
 
 ```
 class Jungle {
